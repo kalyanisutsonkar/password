@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <p>Need help logging an account? <a href="">click here</a> for a password support and more</p>
+        <div class="line"></div>
+        <h1>Create Your Free Account</h1>
+        <p class="red">(First and last Name entered here will be the name displayed on course certificate)</p>
+        <div class="maincenter">
+            <div class="center1">
+                <div class="left">
+                    <div class="write">First Name: <span>*</span></div>
+                    <input type="text" id="firstName">
+                </div>
+                <div class="left">
+                    <div class="write">Last Name: <span>*</span></div>
+                    <input type="text" id="lastName">   
+                </div>
+                <div class="left">
+                    <div class="write">Email Address: <span>*</span></div>
+                    <input type="text" id="email">  
+                </div>
+                <div class="left">
+                    <div class="write">Confirm Email Address: <span>*</span></div>
+                    <input type="text" id="confirmEmail">
+                </div>
+            </div>
+            <div class="rightcenter">
+                <div class="center2">
+                    <div class="left">
+                        <div class="write">I am most interested in learning about...: <span>*</span></div>
+                        <select id="interest">
+                            <option value=""></option>
+                            <option value="Pune">Pune</option>
+                            <option value="Nagpur">Nagpur</option>
+                            <option value="Mumbai">Mumbai</option>
+                        </select>
+                    </div>
+                    <div class="left">
+                        <div class="write"> Role: <span>*</span></div>
+                        <select id="role">
+                            <option value=""></option>
+                            <option value="Pune">Pune</option>
+                            <option value="Nagpur">Nagpur</option>
+                            <option value="Mumbai">Mumbai</option>
+                        </select>  
+                    </div>
+                    <div class="left">
+                        <div class="write">Location: <span>*</span></div>
+                        <select id="location">
+                            <option value=""></option>
+                            <option value="Pune">Pune</option>
+                            <option value="Nagpur">Nagpur</option>
+                            <option value="Mumbai">Mumbai</option>
+                        </select>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="agree" name="agree">
+                        <label for="agree">I agree to the <span>Terms of use</span> and <span>Privacy Policy*</span></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pass">
+        <div class="write1">New Password  <span>*</span></div>
+        <input type="password" id="password">
+    </div>
+    <div class="pass">
+        <div class="write1">Confirm Password  <span>*</span></div>
+        <input type="password" id="confirmPassword">
+    </div>
+    <div class="button">
+        <button onclick="createAccount()">Create Account</button>
+    </div>
+    
+    <script>
+        function createAccount() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var confirmEmail = document.getElementById("confirmEmail").value;
+            var interest = document.getElementById("interest").value;
+            var role = document.getElementById("role").value;
+            var location = document.getElementById("location").value;
+            var agree = document.getElementById("agree").checked;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            // Validate inputs here
+
+            // If validation passes, proceed with creating the account
+            if (firstName && lastName && email && confirmEmail && interest && role && location && agree && password && confirmPassword) {
+                // Perform account creation logic here
+                alert("Account created successfully!");
+            } else {
+                alert("Please fill in all the required fields and agree to the terms.");
+            }
+        }
+    </script>
+</body>
+</html>
